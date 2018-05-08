@@ -1,3 +1,18 @@
-console.log("app loaded")
-const div = document.querySelector('.container')
-console.log(div)
+var app = new Vue({
+  el: '#app',
+  data: {
+    todos:[
+    "my first todo item",
+    "my second todo item",
+    "my third todo item"
+    ],
+    item:'to do item'
+  },
+  methods: {
+  	addTodo(){
+  		this.todos.push(this.item)
+  		this.item='';
+  	}
+
+  }
+})
